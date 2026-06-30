@@ -18,3 +18,14 @@ TEST(PrimeFactor, Of1)
 
 	EXPECT_EQ(expect, actual);
 }
+
+TEST(PrimeFactor, Of2)
+{
+	PrimeFactors primefactors;
+
+	vector<int> actual = primefactors.of(2);
+
+	vector<int> expect = {2};
+
+	EXPECT_EQ(expect, actual);
+}
