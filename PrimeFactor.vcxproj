@@ -139,6 +139,7 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="primefactors.cpp" />
     <ClCompile Include="primefactors_test.cpp" />
   </ItemGroup>
