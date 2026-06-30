@@ -8,24 +8,20 @@ using namespace testing;
 
 using std::vector;
 
-TEST(PrimeFactor, Of1)
-{
+class PrimeFixture : public Test {
+public:
 	PrimeFactors primefactors;
+	vector<int> expect;
+};
 
-	vector<int> actual = primefactors.of(1);
-
-	vector<int> expect = {};
-
-	EXPECT_EQ(expect, actual);
+TEST_F(PrimeFixture, Of1)
+{
+	expect = {};
+	EXPECT_EQ(expect, primefactors.of(1));
 }
 
-TEST(PrimeFactor, Of2)
+TEST_F(PrimeFixture, Of2)
 {
-	PrimeFactors primefactors;
-
-	vector<int> actual = primefactors.of(2);
-
-	vector<int> expect = {2};
-
-	EXPECT_EQ(expect, actual);
+	expect = { 2 };
+	EXPECT_EQ(expect, primefactors.of(2));
 }
